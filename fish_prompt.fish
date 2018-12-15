@@ -33,8 +33,8 @@ function fish_prompt
     if git_is_staged
       set git_glyph $git_glyph$green"+"$normal
     end
-    set -l git_glyph $git_glyph$red(git_ahead "%" "%" "%%")$normal
     echo -n " $branch_name$git_glyph"
+    echo -n $red(git_ahead "%" "%" "%%")$normal
   end
 
   echo " "
